@@ -1,0 +1,266 @@
+/* Reset and Base Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #1da1f2;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin-left: 1.5rem;
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  color: #e1e8ed;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 2px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (max-width: 600px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #1da1f2;
+    width: 150px;
+    padding: 1rem;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
+
+/* Dashboard Section */
+.dashboard-section {
+  padding: 2rem 0;
+}
+
+h1 {
+  color: #1da1f2;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: #657786;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Card Styles */
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.help-card p {
+  margin: 0.5rem 0;
+  color: #657786;
+}
+
+.card h3 {
+  color: #1da1f2;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1a91da;
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Content Area */
+#content {
+  margin-top: 1.5rem;
+}
+
+#content h3 {
+  color: #1da1f2;
+  margin-bottom: 1rem;
+}
+
+#content input,
+#content textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#content .options-container {
+  display: block; /* Simplified to block to avoid flex spacing issues */
+  margin: 0; /* Remove margin to place options right below question */
+  padding: 0; /* Remove padding */
+}
+
+#content .options-container label {
+  display: block;
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+/* Remove padding */
+#content .options-container label input[type="radio"] {
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+}
+
+#content button {
+  margin-right: 1rem;
+}
+
+#grades-list p {
+  margin: 0.5rem 0;
+}
+
+#grades-list button {
+  margin-left: 1rem;
+  padding: 0.4rem 1rem;
+  background-color: #28a745;
+  color: white;
+}
+
+#grades-list button:hover {
+  background-color: #218838;
+}
+
+/* Timer */
+#timer {
+  font-size: 1.2rem;
+  color: #dc3545;
+  margin: 1rem 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  #content .options-container {
+    display: block; /* Keep as block */
+  }
+}
