@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xamly - Student Dashboard</title>
+  <link rel="stylesheet" href="css/studentdashboard.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a href="index.html">Xamly</a>
+    </div>
+    <div class="navbar-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="navbar-menu">
+      <li><a href="#" id="logout-link">Logout</a></li>
+    </ul>
+  </nav>
+
+  <section class="dashboard-section">
+    <div class="container">
+      <h1>Student Dashboard</h1>
+      <h2 id="welcome-message"></h2>
+      <div class="card">
+        <h3>Actions</h3>
+        <button class="btn btn-primary" id="take-exam-btn">Take Exam</button>
+        <button class="btn btn-primary" id="view-grades-btn">View Grades</button>
+      </div>
+      <div class="card help-card">
+        <h3>How to Take Exams</h3>
+        <p>1. Get the exam code from your teacher (e.g., MATH123).</p>
+        <p>2. Click 'Take Exam' and enter the code.</p>
+        <p>3. Answer all questions and submit.</p>
+        <p>4. Check 'View Grades' for your results.</p>
+      </div>
+      <div id="content"></div>
+    </section>
+
+  <script type="module" src="js/studentdashboard.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    (function() {
+      function initCloudflare() {
+        var iframe = document.createElement('iframe');
+        iframe.height = 1;
+        iframe.width = 1;
+        iframe.style.position = 'absolute';
+        iframe.style.top = 0;
+        iframe.style.left = 0;
+        iframe.style.border = 'none';
+        iframe.style.visibility = 'hidden';
+        document.body.appendChild(iframe);
+        if (document.readyState !== 'loading') loadScript(iframe);
+        else document.addEventListener('DOMContentLoaded', () => loadScript(iframe));
+      }
+      function loadScript(iframe) {
+        var doc = iframe.contentDocument || iframe.contentWindow.document;
+        if (doc) {
+          var script = doc.createElement('script');
+          script.innerHTML = "window.__CF$cv$params={r:'931adda25868bd0c',t:'MTc0NDg4MTgyOC4wMDAwMDA='};var s=document.createElement('script');s.nonce='';s.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(s);";
+          doc.getElementsByTagName('head')[0].appendChild(script);
+        }
+      }
+      if (document.body) initCloudflare();
+    })();
+  </script>
+</body>
+</html>

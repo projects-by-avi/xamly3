@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xamly - Sign Up</title>
+    <link rel="stylesheet" href="css/signup.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <a href="index.html">Xamly</a>
+      </div>
+      <div class="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="navbar-menu">
+        <li><a href="signup.html" class="active">Sign Up</a></li>
+        <li><a href="signin.html">Sign In</a></li>
+      </ul>
+    </nav>
+
+    <section class="signup-section">
+      <div class="signup-container">
+        <h1>Sign Up for Xamly</h1>
+        <form id="signup-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="role">Role</label>
+            <select id="role" required>
+              <option value="student">Student</option>
+              <option value="teacher">Teacher</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+          <p class="signin-link">
+            Already have an account? <a href="signin.html">Sign In</a>
+          </p>
+        </form>
+      </div>
+    </section>
+
+    
+    <script type="module" src="js/signup.js"></script>
+  </body>
+</html>

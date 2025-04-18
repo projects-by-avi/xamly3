@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xamly - Teacher Dashboard</title>
+  <link rel="stylesheet" href="css/teacherdashboard.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a href="index.html">Xamly</a>
+    </div>
+    <div class="navbar-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="navbar-menu">
+      <li><a href="#" onclick="logout()">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Dashboard Section -->
+  <section class="dashboard-section">
+    <div class="container">
+      <h1>Teacher Dashboard</h1>
+      <h2 id="welcome-message"></h2>
+      <div class="card">
+        <h3>Actions</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <button class="btn btn-primary" onclick="showCreateExam()">Create Exam</button>
+          <button class="btn btn-primary" onclick="showGradeExams()">Grade Exams</button>
+          <button class="btn btn-primary" onclick="showExamList()">View Exams</button>
+        </div>
+      </div>
+      <div id="content"></div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script type="module" src="js/teacherdashboard.js"></script>
+  <script>
+    (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'931b3a943cbdbfa7',t:'MTc0NDg4NTYzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
+  </script>
+</body>
+</html>
